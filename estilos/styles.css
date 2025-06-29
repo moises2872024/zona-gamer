@@ -224,7 +224,7 @@ footer a:hover {
 /* Mobile grande */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .card-img-container {
-        aspect-ratio: 4 / 5; /* Proporción vertical para mobile grande */
+        aspect-ratio: 3 / 4; /* Más alta para mobile grande */
     }
 }
 
@@ -275,7 +275,7 @@ footer a:hover {
     }
     
     .card-img-container {
-        aspect-ratio: 4 / 5; /* Proporción vertical para mobile */
+        aspect-ratio: 3 / 4; /* Más alta para mobile */
     }
     
     .game-card .card-title {
@@ -304,7 +304,7 @@ footer a:hover {
 /* Mobile muy pequeño */
 @media (max-width: 575.98px) {
     .card-img-container {
-        aspect-ratio: 1 / 1; /* Proporción cuadrada para pantallas muy pequeñas */
+        aspect-ratio: 3 / 4; /* Más alta también para pantallas muy pequeñas */
     }
 }
 
