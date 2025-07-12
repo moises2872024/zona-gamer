@@ -10,7 +10,8 @@ body {
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: #ffffff;
     line-height: 1.6;
-    padding-top: 76px; /* Espacio para navbar fijo */
+    padding-top: 76px;
+    /* Espacio para navbar fijo */
 }
 
 /* Header - Navbar personalizado */
@@ -61,8 +62,8 @@ header .navbar-brand {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('../imagenes/hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../imagenes/hero.jpg') no-repeat center center/cover;
     position: relative;
 }
 
@@ -128,7 +129,8 @@ header .navbar-brand {
 /* Contenedor de imagen con aspect-ratio responsive */
 .card-img-container {
     width: 100%;
-    aspect-ratio: 3 / 4; /* Mantiene proporción consistente */
+    aspect-ratio: 3 / 4;
+    /* Mantiene proporción consistente */
     overflow: hidden;
     background-color: #000;
     border-radius: 15px 15px 0 0;
@@ -155,17 +157,27 @@ header .navbar-brand {
 .game-card .card-title {
     color: #00ffd5;
     font-family: "Playfair Display", serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.game-card .card-text {
+.game-card h3 {
     color: #e0e0e0;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-family: Fira Sans;
     text-align: center;
     line-height: 1.6;
 }
+
+.game-card p {
+    color: #e0e0e0;
+    font-family: Josefin Sans;
+    font-size: 0.93rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
 
 /* Footer */
 footer {
@@ -217,14 +229,16 @@ footer a:hover {
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .card-img-container {
-        aspect-ratio: 4 / 5; /* Proporción ligeramente menos alta */
+        aspect-ratio: 4 / 5;
+        /* Proporción ligeramente menos alta */
     }
 }
 
 /* Mobile grande */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .card-img-container {
-        aspect-ratio: 3 / 4; /* Más alta para mobile grande */
+        aspect-ratio: 3 / 4;
+        /* Más alta para mobile grande */
     }
 }
 
@@ -233,67 +247,72 @@ footer a:hover {
     body {
         padding-top: 65px;
     }
-    
+
     header .navbar-brand {
         font-size: 1.6rem;
     }
-    
+
     .navbar-nav .nav-link {
         margin: 5px 0;
         text-align: center;
     }
-    
+
     .hero {
         min-height: 80vh;
     }
-    
+
     .hero-content h2 {
         font-size: 2rem;
         line-height: 1.2;
     }
-    
+
     .hero-content p {
         font-size: 1rem;
     }
-    
+
     .btn-custom {
         padding: 10px 25px;
         font-size: 0.95rem;
     }
-    
+
     .games-section {
         padding: 3rem 0 !important;
     }
-    
+
     .games-section h2 {
         font-size: 1.8rem;
         margin-bottom: 2rem !important;
     }
-    
+
     .game-card {
         margin-bottom: 1rem;
     }
-    
+
     .card-img-container {
-        aspect-ratio: 3 / 4; /* Más alta para mobile */
+        aspect-ratio: 3 / 4;
+        /* Más alta para mobile */
     }
-    
+
     .game-card .card-title {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
-    
-    .game-card .card-text {
+
+    .game-card h3 {
         font-size: 0.9rem;
     }
-    
+
+    .game-card p {
+        font-size: 0.9rem;
+    }
+
     footer {
         padding: 2rem 0 !important;
     }
-    
+
     .social-links {
         margin-top: 1rem;
     }
-    
+
     .social-links a {
         display: block;
         margin: 5px 0;
@@ -304,7 +323,8 @@ footer a:hover {
 /* Mobile muy pequeño */
 @media (max-width: 575.98px) {
     .card-img-container {
-        aspect-ratio: 3 / 4; /* Más alta también para pantallas muy pequeñas */
+        aspect-ratio: 3 / 4;
+        /* Más alta también para pantallas muy pequeñas */
     }
 }
 
@@ -318,6 +338,7 @@ footer a:hover {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -333,6 +354,7 @@ footer a:hover {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
