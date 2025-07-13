@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../estilos/styles.css" />
 </head>
@@ -21,7 +21,10 @@
     <!-- NavBar -->
     <header class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
-            <h1 class="navbar-brand mb-0">Zona Gamer 🎮</h1>
+            <h1 class="navbar-brand mb-0 d-flex align-items-center">
+                <img src="../imagenes/logo.png" alt="Logo Zona Gamer" width="45" height="45" class="me-3">
+                Zona Gamer
+            </h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,23 +50,30 @@
 
     <main class="games-section py-5">
         <div class="container">
-            <h2 class="text-center mb-5 display-4">Próximos Lanzamientos</h2>
+            <h2 class="text-center mb-5 display-4 juegos-titulo">
+                <i class="fa-solid fa-gamepad"></i>
+                <span class="titulo-brillo">Próximos Lanzamientos</span>
+                <i class="fa-solid fa-star"></i>
+            </h2>
+
             <!-- cards de próximos lanzamientos -->
             <div class="row justify-content-center g-4">
                 <div class="col-12 col-lg-10">
                     <div class="card game-card mb-3" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="Doom: The Dark Ages">
+                                <img src="../imagenes/imagen13.jpeg" class="img-fluid rounded-start"
+                                    alt="imagen de Grand Theft Auto VI">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Doom: The Dark Ages</h5>
-                                    <p class="card-text">Precuela ambientada en una Edad Media infernal, con nuevas
-                                        armas y la historia del Doom Slayer.</p>
-                                    <p class="card-text">Plataformas: <i class="fa-brands fa-playstation"></i> <i class="fa-brands fa-xbox" style="color: #107d08;"></i></p>
-                                    <p class="card-text"><small class="text-body-white">Lanzamiento: Mayo de
-                                            2025</small></p>
+                                    <h2 class="card-title">Grand Theft Auto VI</h2>
+                                    <p class="card-text">La esperada secuela de GTA V que promete revolucionar la
+                                        franquicia con nuevos personajes y ambientación</p>
+                                    <h3 class="card-text"><strong>Plataformas:</strong> <i class="fa-solid fa-desktop"
+                                            style="color: #ffffff;"></i> <i class="fa-brands fa-playstation"></i> <i
+                                            class="fa-brands fa-xbox" style="color: #107d08;"></i></h3>
+                                    <h3 class="card-text pb-1"><strong>Lanzamiento:</strong> 26 de Mayo de 2026</h3>
                                 </div>
                             </div>
                         </div>
@@ -74,14 +84,19 @@
                     <div class="card game-card mb-3" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="">
+                                <img src="../imagenes/imagen14.jpg" class="img-fluid rounded-start"
+                                    alt="imagen de Resident Evil 9: Requiem">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"></p>
-                                    <p class="card-text">Plataformas: <i class="fa-brands fa-playstation"></i> <i class="fa-brands fa-xbox" style="color: #107d08;"></i></p>
-                                    <p class="card-text"><small class="text-body-white">Lanzamiento:</small></p>
+                                    <h2 class="card-title">Resident Evil 9: Requiem</h2>
+                                    <p class="card-text">Survival horror ambientado en Raccoon City: controla a Grace
+                                        Ashcroft en investigación terrorífica que ocupa perspectiva en primera o tercera
+                                        persona</p>
+                                    <h3 class="card-text"><strong>Plataformas:</strong> <i class="fa-solid fa-desktop"
+                                            style="color: #ffffff;"></i> <i class="fa-brands fa-playstation"></i> <i
+                                            class="fa-brands fa-xbox" style="color: #107d08;"></i></h3>
+                                    <h3 class="card-text pb-1"><strong>Lanzamiento:</strong> 27 de Febrero de 2026</h3>
                                 </div>
                             </div>
                         </div>
@@ -92,14 +107,19 @@
                     <div class="card game-card mb-3" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="">
+                                <img src="../imagenes/imagen15.jpg" class="img-fluid rounded-start"
+                                    alt="imagen de Mafia: The Old Country">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"></p>
-                                    <p class="card-text">Plataformas: <i class="fa-brands fa-playstation"></i> <i class="fa-brands fa-xbox" style="color: #107d08;"></i></p>
-                                    <p class="card-text"><small class="text-body-white">Lanzamiento:</small></p>
+                                    <h2 class="card-title">Mafia: The Old Country</h2>
+                                    <p class="card-text">Precuela ambientada en Sicilia de principios del siglo XX,
+                                        explora los orígenes del crimen organizado con narrativa rica y estilo
+                                        cinematográfico</p>
+                                    <h3 class="card-text"><strong>Plataformas:</strong> <i class="fa-solid fa-desktop"
+                                            style="color: #ffffff;"></i> <i class="fa-brands fa-playstation"></i> <i
+                                            class="fa-brands fa-xbox" style="color: #107d08;"></i></h3>
+                                    <h3 class="card-text pb-1"><strong>Lanzamiento:</strong> 8 de agosto de 2025</h3>
                                 </div>
                             </div>
                         </div>
@@ -110,14 +130,19 @@
                     <div class="card game-card mb-3" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="">
+                                <img src="../imagenes/imagen16.jpg" class="img-fluid rounded-start"
+                                    alt="imagen de Anno 117: Pax Romana">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"></p>
-                                    <p class="card-text">Plataformas: <i class="fa-brands fa-playstation"></i> <i class="fa-brands fa-xbox" style="color: #107d08;"></i></p>
-                                    <p class="card-text"><small class="text-body-white">Lanzamiento:</small></p>
+                                    <h2 class="card-title">Anno 117: Pax Romana</h2>
+                                    <p class="card-text">Simulador de construcción y estrategia ambientado en la Roma
+                                        antigua; incluye elementos diplomáticos, comercio y defensa</p>
+                                    <h3 class="card-text"><strong>Plataformas:</strong> <i class="fa-solid fa-desktop"
+                                            style="color: #ffffff;"></i> <i class="fa-brands fa-playstation"></i> <i
+                                            class="fa-brands fa-xbox" style="color: #107d08;"></i></h3>
+                                    <h3 class="card-text pb-1"><strong>Lanzamiento:</strong> 13 de noviembre de 2025
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -128,14 +153,18 @@
                     <div class="card game-card mb-3" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="">
+                                <img src="../imagenes/imagen17.jpg" class="img-fluid rounded-start"
+                                    alt="imagen de The Dark Pictures: Directive 8020">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"></p>
-                                    <p class="card-text">Plataformas: <i class="fa-brands fa-playstation"></i></p>
-                                    <p class="card-text"><small class="text-body-white">Lanzamiento:</small></p>
+                                    <h2 class="card-title">The Dark Pictures: Directive 8020</h2>
+                                    <p class="card-text">Thriller cinematográfico de horror sci-fi ambientado en una
+                                        nave colonial espacial; decisiones morales influyentes en la trama</p>
+                                    <h3 class="card-text"><strong>Plataformas:</strong> <i class="fa-solid fa-desktop"
+                                            style="color: #ffffff;"></i> <i class="fa-brands fa-playstation"></i> <i
+                                            class="fa-brands fa-xbox" style="color: #107d08;"></i></h3>
+                                    <h3 class="card-text pb-1"><strong>Lanzamiento:</strong> 2 de octubre de 2025</h3>
                                 </div>
                             </div>
                         </div>
@@ -146,14 +175,19 @@
                     <div class="card game-card mb-3" style="max-width: 100%;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="">
+                                <img src="../imagenes/imagen18.webp" class="img-fluid rounded-start"
+                                    alt="imagen de The Outer Worlds 2">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"></p>
-                                    <p class="card-text">Plataformas: <i class="fa-brands fa-playstation"></i></p>
-                                    <p class="card-text"><small class="text-body-white">Lanzamiento:</small></p>
+                                    <h2 class="card-title">The Outer Worlds 2</h2>
+                                    <p class="card-text">Secuela independiente del RPG de Obsidian; resolverás
+                                        conflictos corporativos y distorsiones dimensionales en el sistema de Arcadia
+                                    </p>
+                                    <h3 class="card-text"><strong>Plataformas:</strong> <i class="fa-solid fa-desktop"
+                                            style="color: #ffffff;"></i> <i class="fa-brands fa-playstation"></i> <i
+                                            class="fa-brands fa-xbox" style="color: #107d08;"></i></h3>
+                                    <h3 class="card-text pb-1"><strong>Lanzamiento: 29 de octubre de 2025</strong></h3>
                                 </div>
                             </div>
                         </div>

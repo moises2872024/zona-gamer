@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="estilos/styles.css" />
 </head>
@@ -21,7 +21,10 @@
     <!-- NavBar -->
     <header class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
-            <h1 class="navbar-brand mb-0">Zona Gamer 🎮</h1>
+            <h1 class="navbar-brand mb-0 d-flex align-items-center">
+                <img src="imagenes/logo.png" alt="Logo Zona Gamer" width="45" height="45" class="me-3">
+                Zona Gamer
+            </h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,24 +53,32 @@
         <section id="inicio" class="hero d-flex align-items-center justify-content-center">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-6">
+                    <div class="col-12 col-md-10 col-lg-8">
                         <div class="hero-content text-center">
-                            <h2 class="display-3 fw-bold mb-4">Bienvenido a <br class="d-md-none"> Zona Gamer</h2>
-                            <p class="lead mb-4">Descubre los mejores juegos de la historia y de la actualidad.</p>
-                            <a href="paginas/explorar.html" class="btn btn-custom btn-lg">Explorar Juegos</a>
-                            <a href="paginas/proximos.html" class="btn btn-custom btn-lg">Proximos Lanzamientos</a>
+                            <h2 class="hero-title mb-4">Bienvenido a <span>Zona Gamer</span></h2>
+                            <p class="hero-subtitle mb-5">Explora los mejores juegos de todos los tiempos. Vive la
+                                experiencia.</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="paginas/explorar.html" class="btn btn-hero">🎮 Explorar Juegos</a>
+                                <a href="paginas/proximos.html" class="btn btn-hero-alt">🚀 Próximos Lanzamientos</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Juegos Destacados -->
         <section id="juegos" class="games-section py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-center mb-5 display-4">Juegos Destacados</h2>
+                        <h2 class="text-center mb-5 display-4 juegos-titulo">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span class="titulo-brillo">Juegos Destacados</span>
+                            <i class="fa-solid fa-star"></i>
+                        </h2>
                     </div>
                 </div>
                 <div class="row g-4">
