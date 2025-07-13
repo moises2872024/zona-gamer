@@ -8,7 +8,6 @@
 body {
     font-family: "Outfit", sans-serif;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: #ffffff;
     line-height: 1.6;
     padding-top: 76px;
     /* Espacio para navbar fijo */
@@ -84,46 +83,105 @@ header .navbar-brand {
     position: relative;
 }
 
-.hero-content h2 {
+.hero-title {
     font-family: "Playfair Display", serif;
-    text-decoration: underline;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+
+    color: #00ffd5; /* Color base */
+    text-shadow:
+        0 0 5px #00ffd5,
+        0 0 10px #00ffd5,
+        0 0 20px #00ffd5,
+        0 0 30px #ff00cc,
+        0 0 40px #ff00cc,
+        0 0 60px #ff00cc,
+        0 0 80px #ff00cc;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    font-family: "Fira Sans", sans-serif;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Botón personalizado */
-.btn-custom {
+/* Botón principal */
+.btn-hero {
     background: linear-gradient(45deg, #00ffd5, #00c0a3);
     color: #000;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
+    padding: 14px 32px;
     font-weight: bold;
-    padding: 12px 30px;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 255, 213, 0.3);
 }
 
-.btn-custom:hover {
+.btn-hero:hover {
     background: linear-gradient(45deg, #00c0a3, #008c73);
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 255, 213, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 255, 213, 0.5);
+}
+
+/* Botón secundario */
+.btn-hero-alt {
+    background: linear-gradient(45deg, #ff00cc, #7f00ff);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 32px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 204, 0.3);
+}
+
+.btn-hero-alt:hover {
+    background: linear-gradient(45deg, #7f00ff, #9900ff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 0, 204, 0.5);
 }
 
 /* Games Section */
+
+.juegos-titulo {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffd5;
+    text-shadow: 0 0 10px #00ffd5, 0 0 20px #ff00cc;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-brillo {
+    background: linear-gradient(90deg, #00ffd5, #ff00cc, #00ffd5);
+    background-size: 200%;
+    background-position: 0% center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.juegos-titulo i {
+    color: #ff00cc;
+    text-shadow: 0 0 8px #ff00cc;
+    font-size: 3.5rem;
+}
+
 .games-section {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-}
-
-
-.games-section h2 {
-    font-family: Orbitron;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Game Cards personalizadas */
@@ -149,7 +207,6 @@ header .navbar-brand {
 .card-img-container {
     width: 100%;
     aspect-ratio: 3 / 4;
-    /* Mantiene proporción consistente */
     overflow: hidden;
     background-color: #000;
     border-radius: 15px 15px 0 0;
@@ -202,7 +259,6 @@ header .navbar-brand {
 footer {
     background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
     background-size: 400% 400%;
-    animation: neonBackground 25s ease infinite;
     box-shadow: 0 -2px 20px rgba(0, 255, 213, 0.4);
 }
 
@@ -259,8 +315,6 @@ footer a {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
-
-
 /* Responsive Design */
 
 /* Desktop grande */
@@ -272,6 +326,12 @@ footer a {
 
 /* Desktop */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .juegos-titulo i {
+        font-size: 2.9rem;
+    }
+     .juegos-titulo {
+        font-size: 2.9rem;
+    }
     .card-img-container {
         aspect-ratio: 3 / 4;
     }
@@ -279,30 +339,33 @@ footer a {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+     .juegos-titulo {
+        font-size: 2.4rem;
+    }
+
+     .juegos-titulo i {
+        font-size: 2.4rem;
+    }
+    
     .card-img-container {
         aspect-ratio: 4 / 5;
         /* Proporción ligeramente menos alta */
     }
 }
 
-/* Mobile grande */
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-    .juegos-titulo i {
-        font-size: 1.7rem;
-    }
-    .card-img-container {
-        aspect-ratio: 3 / 4;
-        /* Más alta para mobile grande */
-    }
-}
 
 /* Mobile */
 @media (max-width: 767.98px) {
-     .juegos-titulo i {
-        font-size: 1.5rem;
+
+     .juegos-titulo {
+        font-size: 1.7rem;
     }
 
+     .juegos-titulo i {
+        font-size: 1.7rem;
+    }
+    
     body {
         padding-top: 65px;
     }
@@ -338,18 +401,12 @@ footer a {
         padding: 3rem 0 !important;
     }
 
-    .games-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem !important;
-    }
-
     .game-card {
         margin-bottom: 1rem;
     }
 
     .card-img-container {
         aspect-ratio: 3 / 4;
-        /* Más alta para mobile */
     }
 
     .game-card .card-title {
@@ -369,11 +426,11 @@ footer a {
     }
 
     .social-links {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 
     .social-links a {
-        display: block;
+        display: inline-block;
         margin: 5px 0;
         text-align: center;
     }
@@ -381,6 +438,13 @@ footer a {
 
 /* Mobile muy pequeño */
 @media (max-width: 575.98px) {
+    .juegos-titulo {
+        font-size: 1.1rem;
+    }
+
+     .juegos-titulo i {
+        font-size: 1.1rem;
+    }
     .card-img-container {
         aspect-ratio: 3 / 4;
         /* Más alta también para pantallas muy pequeñas */
@@ -431,116 +495,4 @@ html {
 .nav-link:focus {
     outline: 2px solid #00ffd5;
     outline-offset: 2px;
-}
-
-.juegos-titulo {
-    font-family: "Orbitron", sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #00ffd5;
-    text-shadow: 0 0 10px #00ffd5, 0 0 20px #ff00cc;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.titulo-brillo {
-    background: linear-gradient(90deg, #00ffd5, #ff00cc, #00ffd5);
-    background-size: 200%;
-    background-position: 0% center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-@keyframes tituloGlow {
-    from {
-        text-shadow: 0 0 10px #00ffd5, 0 0 20px #ff00cc;
-    }
-
-    to {
-        text-shadow: 0 0 20px #00ffd5, 0 0 40px #ff00cc;
-    }
-}
-
-@keyframes textoBrillante {
-    0% {
-        background-position: 0% center;
-    }
-
-    100% {
-        background-position: 200% center;
-    }
-}
-
-.juegos-titulo i {
-    color: #ff00cc;
-    text-shadow: 0 0 8px #ff00cc;
-    font-size: 3.5rem;
-}
-
-.hero-title {
-    font-family: "Orbitron", sans-serif;
-    font-size: 3.2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-
-    background: linear-gradient(90deg, #00ffd5, #ff00cc, #00ffd5);
-    background-size: 200%;
-    background-position: 100% center; /* Cambia la posición del brillo */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-    animation: none;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    color: #e0e0e0;
-    font-family: "Fira Sans", sans-serif;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
-}
-
-/* Botón principal */
-.btn-hero {
-    background: linear-gradient(45deg, #00ffd5, #00c0a3);
-    color: #000;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 32px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 255, 213, 0.3);
-}
-
-.btn-hero:hover {
-    background: linear-gradient(45deg, #00c0a3, #008c73);
-    color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 255, 213, 0.5);
-}
-
-/* Botón secundario */
-.btn-hero-alt {
-    background: linear-gradient(45deg, #ff00cc, #7f00ff);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 32px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 0, 204, 0.3);
-}
-
-.btn-hero-alt:hover {
-    background: linear-gradient(45deg, #7f00ff, #9900ff);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 0, 204, 0.5);
 }
