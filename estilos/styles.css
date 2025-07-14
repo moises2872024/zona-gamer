@@ -91,7 +91,8 @@ header .navbar-brand {
     letter-spacing: 2px;
     text-align: center;
 
-    color: #00ffd5; /* Color base */
+    color: #00ffd5;
+    /* Color base */
     text-shadow:
         0 0 5px #00ffd5,
         0 0 10px #00ffd5,
@@ -329,9 +330,11 @@ footer a {
     .juegos-titulo i {
         font-size: 2.9rem;
     }
-     .juegos-titulo {
+
+    .juegos-titulo {
         font-size: 2.9rem;
     }
+
     .card-img-container {
         aspect-ratio: 3 / 4;
     }
@@ -340,14 +343,14 @@ footer a {
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-     .juegos-titulo {
+    .juegos-titulo {
         font-size: 2.4rem;
     }
 
-     .juegos-titulo i {
+    .juegos-titulo i {
         font-size: 2.4rem;
     }
-    
+
     .card-img-container {
         aspect-ratio: 4 / 5;
         /* Proporción ligeramente menos alta */
@@ -358,14 +361,14 @@ footer a {
 /* Mobile */
 @media (max-width: 767.98px) {
 
-     .juegos-titulo {
+    .juegos-titulo {
         font-size: 1.7rem;
     }
 
-     .juegos-titulo i {
+    .juegos-titulo i {
         font-size: 1.7rem;
     }
-    
+
     body {
         padding-top: 65px;
     }
@@ -395,10 +398,6 @@ footer a {
     .btn-custom {
         padding: 10px 25px;
         font-size: 0.95rem;
-    }
-
-    .games-section {
-        padding: 3rem 0 !important;
     }
 
     .game-card {
@@ -439,12 +438,13 @@ footer a {
 /* Mobile muy pequeño */
 @media (max-width: 575.98px) {
     .juegos-titulo {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
-     .juegos-titulo i {
-        font-size: 1.1rem;
+    .juegos-titulo i {
+        font-size: 1.5rem;
     }
+
     .card-img-container {
         aspect-ratio: 3 / 4;
         /* Más alta también para pantallas muy pequeñas */
