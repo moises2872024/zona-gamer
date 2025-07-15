@@ -18,7 +18,6 @@ header.navbar {
     background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
     background-size: 400% 400%;
     padding: 15px 0;
-    box-shadow: 0 0 15px rgba(0, 255, 213, 0.4);
 }
 
 
@@ -93,14 +92,6 @@ header .navbar-brand {
 
     color: #00ffd5;
     /* Color base */
-    text-shadow:
-        0 0 5px #00ffd5,
-        0 0 10px #00ffd5,
-        0 0 20px #00ffd5,
-        0 0 30px #ff00cc,
-        0 0 40px #ff00cc,
-        0 0 60px #ff00cc,
-        0 0 80px #ff00cc;
 }
 
 .hero-subtitle {
@@ -120,14 +111,12 @@ header .navbar-brand {
     font-weight: bold;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 255, 213, 0.3);
 }
 
 .btn-hero:hover {
     background: linear-gradient(45deg, #00c0a3, #008c73);
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 255, 213, 0.5);
 }
 
 /* Botón secundario */
@@ -140,13 +129,11 @@ header .navbar-brand {
     font-weight: bold;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 0, 204, 0.3);
 }
 
 .btn-hero-alt:hover {
     background: linear-gradient(45deg, #7f00ff, #9900ff);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 0, 204, 0.5);
 }
 
 /* Games Section */
@@ -157,7 +144,6 @@ header .navbar-brand {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #00ffd5;
-    text-shadow: 0 0 10px #00ffd5, 0 0 20px #ff00cc;
     position: relative;
     display: flex;
     justify-content: center;
@@ -191,7 +177,6 @@ header .navbar-brand {
     background-size: 400% 400%;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
     transition: all 0.3s ease;
     overflow: hidden;
 }
@@ -241,11 +226,6 @@ header .navbar-brand {
     font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
-    text-shadow:
-        0 0 5px #00ffd5,
-        0 0 10px #00ffd5,
-        0 0 20px #00ffd5,
-        0 0 30px #ff00cc;
 }
 
 .game-card h3 {
@@ -286,11 +266,6 @@ header .navbar-brand {
     font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
-    text-shadow:
-        0 0 5px #00ffd5,
-        0 0 10px #00ffd5,
-        0 0 20px #00ffd5,
-        0 0 30px #ff00cc;
 }
 
 .game-card-horizontal h3 {
@@ -355,11 +330,6 @@ header .navbar-brand {
     font-family: "Playfair Display", serif;
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    text-shadow:
-        0 0 5px #00ffd5,
-        0 0 10px #00ffd5,
-        0 0 20px #00ffd5,
-        0 0 30px #ff00cc;
 }
 
 .info-subtitle {
@@ -395,7 +365,6 @@ header .navbar-brand {
 footer {
     background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
     background-size: 400% 400%;
-    box-shadow: 0 -2px 20px rgba(0, 255, 213, 0.4);
 }
 
 
