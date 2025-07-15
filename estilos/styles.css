@@ -7,7 +7,7 @@
 
 body {
     font-family: "Outfit", sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background:  #0d00ff;
     line-height: 1.6;
     padding-top: 76px;
     /* Espacio para navbar fijo */
@@ -185,7 +185,7 @@ header .navbar-brand {
     backdrop-filter: blur(10px);
 }
 
-/* Game Cards personalizadas */
+/* Game Cards verticales */
 .game-card {
     background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
     background-size: 400% 400%;
@@ -203,6 +203,11 @@ header .navbar-brand {
     filter: brightness(1.1);
 }
 
+.card a.stretched-link {
+    color: inherit;
+    text-decoration: none;
+    z-index: 2;
+}
 
 /* Contenedor de imagen con aspect-ratio responsive */
 .card-img-container {
@@ -230,13 +235,17 @@ header .navbar-brand {
     background: rgba(0, 0, 0, 0.75);
 }
 
-
 .game-card .card-title {
     color: #00ffd5;
     font-family: "Playfair Display", serif;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
+    text-shadow:
+        0 0 5px #00ffd5,
+        0 0 10px #00ffd5,
+        0 0 20px #00ffd5,
+        0 0 30px #ff00cc;
 }
 
 .game-card h3 {
@@ -255,7 +264,7 @@ header .navbar-brand {
     line-height: 1.6;
 }
 
-/* Estilos para game-card con imágenes horizontales */
+/* game card horizontales */
 .game-card-horizontal {
     background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
     background-size: 400% 400%;
@@ -264,31 +273,32 @@ header .navbar-brand {
     box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
     transition: all 0.3s ease;
     overflow: hidden;
+    animation: fadeInScale 0.6s ease-out;
 }
 
 .game-card-horizontal .card-body {
-
     background: rgba(0, 0, 0, 0.75);
 }
 
 .game-card-horizontal .card-title {
-
     color: #00ffd5;
     font-family: "Playfair Display", serif;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
-
+    text-shadow:
+        0 0 5px #00ffd5,
+        0 0 10px #00ffd5,
+        0 0 20px #00ffd5,
+        0 0 30px #ff00cc;
 }
 
 .game-card-horizontal h3 {
-
     color: #e0e0e0;
     font-size: 1rem;
     font-family: Fira Sans;
     text-align: center;
     line-height: 1.6;
-
 }
 
 .game-card-horizontal p {
@@ -297,7 +307,6 @@ header .navbar-brand {
     font-size: 0.93rem;
     text-align: center;
     line-height: 1.6;
-
 }
 
 .game-card-horizontal:hover {
@@ -313,7 +322,74 @@ header .navbar-brand {
     object-position: center;
 }
 
+/* game card info */
+.info-card {
+    max-width: 700px;
+    background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
+    background-size: 400% 400%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+    overflow: hidden;
+    animation: fadeInScale 0.6s ease-out;
+}
 
+.info-video-container {
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.info-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.info-card .card-body {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 1.5rem;
+}
+
+.info-title {
+    color: #00ffd5;
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow:
+        0 0 5px #00ffd5,
+        0 0 10px #00ffd5,
+        0 0 20px #00ffd5,
+        0 0 30px #ff00cc;
+}
+
+.info-subtitle {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    font-family: Fira Sans;
+    text-align: center;
+}
+
+.date {
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-family: Fira Sans;
+    text-align: center;
+}
+
+.info-features {
+    color: antiquewhite;
+    font-family: Fira Sans;
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    list-style: none;
+}
+
+.info-icons {
+    font-family: Fira Sans;
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+}
 
 /* Footer */
 footer {
@@ -408,9 +484,7 @@ footer a {
         max-width: 100%;
     }
 
-    .horizontal-img {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
+    
 }
 
 /* Tablet */
@@ -441,9 +515,6 @@ footer a {
         max-width: 100%;
     }
 
-    .horizontal-img {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
 }
 
 /* Mobile */
