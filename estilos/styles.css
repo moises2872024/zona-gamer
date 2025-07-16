@@ -1,598 +1,462 @@
-/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Outfit", sans-serif;
-    line-height: 1.6;
-    padding-top: 76px;
-    /* Espacio para navbar fijo */
+  font-family: "Outfit", sans-serif;
+  line-height: 1.6;
+  padding-top: 76px;
 }
 
-/* Header - Navbar personalizado */
+html {
+  scroll-behavior: smooth;
+}
+
 header.navbar {
-    background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
-    background-size: 400% 400%;
-    padding: 15px 0;
+  background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
+  background-size: 400% 400%;
+  padding: 15px 0;
+}
+header.navbar .navbar-brand {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: #00ffd5 !important;
+  font-weight: bold;
+}
+header.navbar .navbar-brand img {
+  filter: drop-shadow(0 0 8px #00ffd5);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+header.navbar .navbar-brand img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px #00ffd5) brightness(1.2);
 }
 
-/* Efectos para el logo en la navbar */
-.navbar-brand img {
-    filter: drop-shadow(0 0 8px #00ffd5);
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 12px #00ffd5) brightness(1.2);
-}
-
-
-header .navbar-brand {
-    font-family: Orbitron;
-    font-size: 2rem;
-    color: #00ffd5 !important;
-    font-weight: bold;
-}
-
-/* Estilos para nav links */
 .navbar-nav .nav-link {
-    position: relative;
-    color: #fff !important;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 8px 16px !important;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    z-index: 1;
+  position: relative;
+  color: #fff !important;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 8px 16px !important;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: 1;
 }
-
 .navbar-nav .nav-link:hover {
-    color: #fff !important;
-    text-shadow: 0 0 5px #00ffd5, 0 0 10px #ff00cc;
-    background-color: rgba(0, 255, 213, 0.1);
-    transform: scale(1.05);
+  color: #fff !important;
+  text-shadow: 0 0 5px #00ffd5, 0 0 10px #ff00cc;
+  background-color: rgba(0, 255, 213, 0.1);
+  transform: scale(1.05);
 }
 
-/* Navbar toggler personalizado */
 .navbar-toggler {
-    border: 1px solid #00ffd5;
-    padding: 4px 8px;
+  border: 1px solid #00ffd5;
+  padding: 4px 8px;
 }
-
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgba(0, 255, 213, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 255, 213, 0.25);
 }
-
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2800, 255, 213, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2800, 255, 213, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Hero Section */
 .hero {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../imagenes/hero.jpg') no-repeat center center/cover;
-    position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../imagenes/hero.jpg") no-repeat center center/cover;
+  position: relative;
 }
-
 .hero-title {
-    font-family: "Playfair Display", serif;
-    font-size: 3.2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    background: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
-    background-size: 200%;
-    background-position: 0% center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  background: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
+  background-size: 200%;
+  background-position: 0% center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
-
 .hero-subtitle {
-    font-size: 1.3rem;
-    color: #e0e0e0;
-    font-family: "Fira Sans", sans-serif;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  font-family: "Fira Sans", sans-serif;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Botón principal */
+.btn-hero-alt, .btn-hero {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.btn-hero-alt:hover, .btn-hero:hover {
+  transform: translateY(-3px);
+}
+
 .btn-hero {
-    background: linear-gradient(45deg, #00ffd5, #00c0a3);
-    color: #000;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 32px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+  background: linear-gradient(45deg, #00ffd5, #00c0a3);
+  color: #000;
 }
-
 .btn-hero:hover {
-    background: linear-gradient(45deg, #00c0a3, #008c73);
-    color: #fff;
-    transform: translateY(-3px);
+  background: linear-gradient(45deg, #00c0a3, #008c73);
+  color: #fff;
 }
 
-/* Botón secundario */
 .btn-hero-alt {
-    background: linear-gradient(45deg, #ff00cc, #7f00ff);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 32px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+  background: linear-gradient(45deg, #ff00cc, #7f00ff);
+  color: #fff;
 }
-
 .btn-hero-alt:hover {
-    background: linear-gradient(45deg, #7f00ff, #9900ff);
-    transform: translateY(-3px);
-}
-
-/* Games Section */
-
-.juegos-titulo {
-    font-family: "Orbitron", sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.titulo-color {
-    background: linear-gradient(90deg, #00ffd5, #ff00cc, #00ffd5);
-    background-size: 200%;
-    background-position: 0% center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.juegos-titulo i {
-    color: #ff00cc;
-    font-size: 3.5rem;
+  background: linear-gradient(45deg, #7f00ff, #9900ff);
 }
 
 .games-section {
-    background: black;
-    backdrop-filter: blur(10px);
+  background: #000;
+  backdrop-filter: blur(10px);
 }
 
-/* Game Cards verticales */
-.game-card {
-    background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
-    background-size: 400% 400%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    overflow: hidden;
+.juegos-titulo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.juegos-titulo i {
+  color: #ff00cc;
+  font-size: 3.5rem;
+}
+
+.titulo-color {
+  background: linear-gradient(90deg, #00ffd5, #ff00cc, #00ffd5);
+  background-size: 200%;
+  background-position: 0% center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.info-card, .game-card-horizontal, .game-card {
+  background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
+  background-size: 400% 400%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.info-card:hover, .game-card-horizontal:hover, .game-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+  filter: brightness(1.1);
+}
+.info-card a.stretched-link, .game-card-horizontal a.stretched-link, .game-card a.stretched-link {
+  color: inherit;
+  text-decoration: none;
+  z-index: 2;
+}
+.info-card .card-body, .game-card-horizontal .card-body, .game-card .card-body {
+  background: rgba(0, 0, 0, 0.75);
+}
+.info-card .card-title, .game-card-horizontal .card-title, .game-card .card-title {
+  color: #00ffd5;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.info-card h3, .game-card-horizontal h3, .game-card h3 {
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+.info-card p, .game-card-horizontal p, .game-card p {
+  color: antiquewhite;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.93rem;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .game-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
-    filter: brightness(1.1);
+  transform: scale(1.03) !important;
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4) !important;
+  filter: brightness(1.1) !important;
 }
-
-.card a.stretched-link {
-    color: inherit;
-    text-decoration: none;
-    z-index: 2;
-}
-
-/* Contenedor de imagen con aspect-ratio responsive */
-.card-img-container {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    background-color: #000;
-    border-radius: 15px 15px 0 0;
-    position: relative;
-}
-
 .game-card .card-img-top {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.game-card:hover .card-img-top {
-    transform: scale(1.05);
-}
-
-.game-card .card-body {
-    background: rgba(0, 0, 0, 0.75);
-}
-
-.game-card .card-title {
-    color: #00ffd5;
-    font-family: "Playfair Display", serif;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.game-card h3 {
-    color: #e0e0e0;
-    font-size: 1rem;
-    font-family: Fira Sans;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.game-card p {
-    color: antiquewhite;
-    font-family: Josefin Sans;
-    font-size: 0.93rem;
-    text-align: center;
-    line-height: 1.6;
-}
-
-/* game card horizontales */
-.game-card-horizontal {
-    background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
-    background-size: 400% 400%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.game-card-horizontal a.stretched-link {
-    color: inherit;
-    text-decoration: none;
-    z-index: 2;
-}
-
-.game-card-horizontal .card-body {
-    background: rgba(0, 0, 0, 0.75);
-}
-
-.game-card-horizontal .card-title {
-    color: #00ffd5;
-    font-family: "Playfair Display", serif;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.game-card-horizontal h3 {
-    color: #e0e0e0;
-    font-size: 1rem;
-    font-family: Fira Sans;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.game-card-horizontal p {
-    color: antiquewhite;
-    font-family: Josefin Sans;
-    font-size: 0.93rem;
-    text-align: center;
-    line-height: 1.6;
+.card-img-container {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 15px 15px 0 0;
+  position: relative;
 }
 
 .game-card-horizontal:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
-    filter: brightness(1.1);
+  transform: scale(1.03) !important;
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4) !important;
+  filter: brightness(1.1) !important;
+}
+.game-card-horizontal .horizontal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.horizontal-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* game card info */
 .info-card {
-    max-width: 700px;
-    background: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
-    background-size: 400% 400%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
+  max-width: 700px;
+}
+.info-card .card-body {
+  padding: 1.5rem;
 }
 
 .info-video-container {
-    border-radius: 15px 15px 0 0;
-    overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
 }
 
 .info-video {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.info-card .card-body {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .info-title {
-    color: #00ffd5;
-    font-family: "Playfair Display", serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+  color: #00ffd5;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .info-subtitle {
-    color: #e0e0e0;
-    font-size: 1.3rem;
-    font-family: Fira Sans;
-    text-align: center;
+  color: #e0e0e0;
+  font-size: 1.3rem;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
 }
 
 .date {
-    color: #e0e0e0;
-    font-size: 1rem;
-    font-family: Fira Sans;
-    text-align: center;
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
 }
 
 .info-features {
-    color: antiquewhite;
-    font-family: Fira Sans;
-    margin-top: 1rem;
-    padding-left: 1.2rem;
-    list-style: none;
+  color: antiquewhite;
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style: none;
 }
 
 .info-icons {
-    font-family: Fira Sans;
-    font-size: 1rem;
-    color: #e0e0e0;
-    text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-align: center;
 }
 
-/* Footer */
 footer {
-    background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
-    background-size: 400% 400%;
+  background: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
+  background-size: 400% 400%;
+  color: #fff;
 }
-
-
 footer a {
-    color: #ffffff !important;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  color: #fff !important;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
-
 footer a:hover {
-    color: #ffffff !important;
-    text-shadow:
-        0 0 5px #00ffd5,
-        0 0 10px #00ffd5,
-        0 0 20px #ff00cc;
-    transform: scale(1.05);
+  color: #fff !important;
+  text-shadow: 0 0 5px #00ffd5, 0 0 10px #ff00cc;
+  transform: scale(1.05);
 }
 
 .social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
-
 .social-links a:hover {
-    background-color: rgba(0, 255, 213, 0.1);
-    transform: translateY(-2px);
+  background-color: rgba(0, 255, 213, 0.1);
+  transform: translateY(-2px);
 }
-
-.social-links a i {
-    transition: all 0.3s ease;
-}
-
 .social-links a:hover i {
-    color: #ffffff;
-    text-shadow: 0 0 6px #00ffd5, 0 0 12px #ff00cc;
+  color: #fff;
+  text-shadow: 0 0 5px #00ffd5, 0 0 10px #ff00cc;
 }
-
+.social-links a i {
+  transition: all 0.3s ease;
+}
 
 header.navbar,
 footer {
-    color: #fff;
+  color: #fff;
 }
-
-header .navbar-brand,
-.navbar-nav .nav-link,
+header.navbar .navbar-brand,
+header.navbar .nav-link,
+header.navbar a,
+footer .navbar-brand,
+footer .nav-link,
 footer a {
-    color: #ffffff !important;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  color: #fff !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive Design */
-
-/* Desktop grande */
-@media (min-width: 1200px) {
-    .card-img-container {
-        aspect-ratio: 3 / 4;
-    }
-}
-
-/* Desktop */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .juegos-titulo i {
-        font-size: 2.9rem;
-    }
-
-    .juegos-titulo {
-        font-size: 2.9rem;
-    }
-
-    .card-img-container {
-        aspect-ratio: 3 / 4;
-    }
-
-    .game-card-horizontal .row {
-        flex-direction: column !important;
-    }
-
-    .game-card-horizontal .col-md-4,
-    .game-card-horizontal .col-md-8 {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .juegos-titulo {
-        font-size: 2.4rem;
-    }
-
-    .juegos-titulo i {
-        font-size: 2.4rem;
-    }
-
-    .card-img-container {
-        aspect-ratio: 4 / 5;
-        /* Proporción ligeramente menos alta */
-    }
-}
-
-@media (max-width: 991.98px) {
-    .game-card-horizontal .row {
-        flex-direction: column !important;
-    }
-
-    .game-card-horizontal .col-md-4,
-    .game-card-horizontal .col-md-8 {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-/* Mobile */
-@media (max-width: 767.98px) {
-    .juegos-titulo {
-        font-size: 1.7rem;
-    }
-
-    .juegos-titulo i {
-        font-size: 1.7rem;
-    }
-
-    body {
-        padding-top: 65px;
-    }
-
-    header .navbar-brand {
-        font-size: 1.6rem;
-    }
-
-    .navbar-nav .nav-link {
-        margin: 5px 0;
-        text-align: center;
-    }
-
-    .hero {
-        min-height: 80vh;
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn-custom {
-        padding: 10px 25px;
-        font-size: 0.95rem;
-    }
-
-    .game-card {
-        margin-bottom: 1rem;
-    }
-
-    .card-img-container {
-        aspect-ratio: 3 / 4;
-    }
-
-    .game-card .card-title {
-        font-size: 1.4rem;
-    }
-
-    .game-card h3 {
-        font-size: 1rem;
-    }
-
-    .game-card p {
-        font-size: 1rem;
-    }
-
-    footer {
-        padding: 2rem 0 !important;
-    }
-
-    .social-links {
-        margin-top: 0.5rem;
-    }
-
-    .social-links a {
-        display: inline-block;
-        margin: 5px 0;
-        text-align: center;
-    }
-}
-
-/* Mobile muy pequeño */
-@media (max-width: 575.98px) {
-    .juegos-titulo {
-        font-size: 1.5rem;
-    }
-
-    .juegos-titulo i {
-        font-size: 1.5rem;
-    }
-
-    .card-img-container {
-        aspect-ratio: 3 / 4;
-        /* Más alta también para pantallas muy pequeñas */
-    }
-}
-
-/* animaciones */
 .fade-in-scale {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 0.6s ease-out;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
 }
-
 .fade-in-scale.visible {
-    opacity: 1;
-    transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mejoras de accesibilidad */
 .navbar-toggler:focus,
 .btn-custom:focus,
 .nav-link:focus {
-    outline: 2px solid #00ffd5;
-    outline-offset: 2px;
+  outline: 2px solid #00ffd5;
+  outline-offset: 2px;
 }
+
+@media (min-width: 1200px) {
+  .card-img-container {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .juegos-titulo {
+    font-size: 2.9rem;
+  }
+  .juegos-titulo i {
+    font-size: 2.9rem;
+  }
+  .card-img-container {
+    aspect-ratio: 3/4;
+  }
+  .game-card-horizontal .row {
+    flex-direction: column !important;
+  }
+  .game-card-horizontal .col-md-4,
+  .game-card-horizontal .col-md-8 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .juegos-titulo {
+    font-size: 2.4rem;
+  }
+  .juegos-titulo i {
+    font-size: 2.4rem;
+  }
+  .card-img-container {
+    aspect-ratio: 4/5;
+  }
+}
+@media (max-width: 991.98px) {
+  .game-card-horizontal .row {
+    flex-direction: column !important;
+  }
+  .game-card-horizontal .col-md-4,
+  .game-card-horizontal .col-md-8 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 65px;
+  }
+  .juegos-titulo {
+    font-size: 1.7rem;
+  }
+  .juegos-titulo i {
+    font-size: 1.7rem;
+  }
+  header .navbar-brand {
+    font-size: 1.6rem;
+  }
+  .navbar-nav .nav-link {
+    margin: 5px 0;
+    text-align: center;
+  }
+  .hero {
+    min-height: 80vh;
+  }
+  .hero-content h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn-custom {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+  .game-card {
+    margin-bottom: 1rem;
+  }
+  .game-card .card-title {
+    font-size: 1.4rem;
+  }
+  .game-card h3 {
+    font-size: 1rem;
+  }
+  .game-card p {
+    font-size: 1rem;
+  }
+  .card-img-container {
+    aspect-ratio: 3/4;
+  }
+  footer {
+    padding: 2rem 0 !important;
+  }
+  .social-links {
+    margin-top: 0.5rem;
+  }
+  .social-links a {
+    display: inline-block;
+    margin: 5px 0;
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .juegos-titulo {
+    font-size: 1.5rem;
+  }
+  .juegos-titulo i {
+    font-size: 1.5rem;
+  }
+  .card-img-container {
+    aspect-ratio: 3/4;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
