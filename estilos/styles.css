@@ -148,7 +148,6 @@ header .navbar-brand {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    animation: fadeInScale 0.6s ease-out;
 }
 
 .titulo-color {
@@ -250,7 +249,6 @@ header .navbar-brand {
     border-radius: 15px;
     transition: all 0.3s ease;
     overflow: hidden;
-    animation: fadeInScale 0.6s ease-out;
 }
 
 .game-card-horizontal a.stretched-link {
@@ -308,7 +306,6 @@ header .navbar-brand {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     overflow: hidden;
-    animation: fadeInScale 0.6s ease-out;
 }
 
 .info-video-container {
@@ -575,37 +572,16 @@ footer a {
     }
 }
 
-/* Mejoras adicionales para animaciones y efectos */
-.hero-content {
-    animation: fadeInUp 1s ease-out;
+/* animaciones */
+.fade-in-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease-out;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.game-card {
-    animation: fadeInScale 0.6s ease-out;
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.fade-in-scale.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Smooth scrolling */
