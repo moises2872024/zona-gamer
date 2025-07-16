@@ -19,7 +19,6 @@ header.navbar {
     padding: 15px 0;
 }
 
-
 /* Efectos para el logo en la navbar */
 .navbar-brand img {
     filter: drop-shadow(0 0 8px #00ffd5);
@@ -58,7 +57,6 @@ header .navbar-brand {
     transform: scale(1.05);
 }
 
-
 /* Navbar toggler personalizado */
 .navbar-toggler {
     border: 1px solid #00ffd5;
@@ -88,16 +86,13 @@ header .navbar-brand {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-
-    background: linear-gradient(90deg, #00ffff, #ff69b4); /* celeste a rosado */
+    background: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
+    background-size: 200%;
+    background-position: 0% center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* Para mayor compatibilidad */
-    background-clip: text;
-    color: transparent;
+    display: inline-block;
 }
-
 
 .hero-subtitle {
     font-size: 1.3rem;
@@ -153,6 +148,7 @@ header .navbar-brand {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    animation: fadeInScale 0.6s ease-out;
 }
 
 .titulo-color {
@@ -183,7 +179,6 @@ header .navbar-brand {
     transition: all 0.3s ease;
     overflow: hidden;
 }
-
 
 .game-card:hover {
     transform: scale(1.03);
@@ -263,7 +258,6 @@ header .navbar-brand {
     text-decoration: none;
     z-index: 2;
 }
-
 
 .game-card-horizontal .card-body {
     background: rgba(0, 0, 0, 0.75);
@@ -391,7 +385,6 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-
 .social-links a {
     display: inline-flex;
     align-items: center;
@@ -460,13 +453,10 @@ footer a {
         width: 100%;
         max-width: 100%;
     }
-
-    
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
     .juegos-titulo {
         font-size: 2.4rem;
     }
@@ -491,12 +481,10 @@ footer a {
         width: 100%;
         max-width: 100%;
     }
-
 }
 
 /* Mobile */
 @media (max-width: 767.98px) {
-
     .juegos-titulo {
         font-size: 1.7rem;
     }
