@@ -399,8 +399,12 @@ footer a {
   .juegos-titulo i {
     font-size: 1.7rem;
   }
-  header .navbar-brand {
-    font-size: 1.6rem;
+  header.navbar .navbar-brand {
+    font-size: 1.25rem !important;
+  }
+  header.navbar .navbar-brand img {
+    width: 30px !important;
+    height: 30px !important;
   }
   .navbar-nav .nav-link {
     margin: 5px 0;
