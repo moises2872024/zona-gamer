@@ -1,0 +1,35 @@
+// Variables
+$primary-color: #00ffd5;
+$secondary-color: #ff00cc;
+$accent-color: #7f00ff;
+$dark-bg: #000;
+$light-text: #fff;
+$gray-text: #e0e0e0;
+$antique-text: antiquewhite;
+
+// Fuentes
+$font-outfit: "Outfit", sans-serif;
+$font-orbitron: "Orbitron", sans-serif;
+$font-playfair: "Playfair Display", serif;
+$font-fira: "Fira Sans", sans-serif;
+$font-josefin: "Josefin Sans", sans-serif;
+
+// Gradientes
+$gradient-primary: linear-gradient(135deg, #00bfa6, #5a00b3, #99005e);
+$gradient-hero: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
+$gradient-card: linear-gradient(135deg, #00ffd5, #7f00ff, #ff0080);
+$gradient-btn-hero: linear-gradient(45deg, #00ffd5, #00c0a3);
+$gradient-btn-alt: linear-gradient(45deg, #ff00cc, #7f00ff);
+$gradient-text: linear-gradient(90deg, #00ffd5, #ff00cc, #00ffd5);
+
+// Tamaños de pantalla
+$desktop-xl: 1200px;
+$desktop: 992px;
+$tablet: 768px;
+$mobile: 576px;
+
+// Espaciado
+$navbar-height: 76px;
+$border-radius: 15px;
+$border-radius-btn: 30px;
+$border-radius-link: 20px;

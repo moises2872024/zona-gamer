@@ -1,0 +1,63 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Footer
+footer {
+  background: $gradient-primary;
+  background-size: 400% 400%;
+  color: $light-text;
+
+  a {
+    color: $light-text !important;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+
+    &:hover {
+      color: $light-text !important;
+      @include text-shadow-glow($primary-color, $secondary-color);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.social-links {
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: $border-radius;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.1);
+      transform: translateY(-2px);
+
+      i {
+        color: $light-text;
+        @include text-shadow-glow;
+      }
+    }
+
+    i {
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// Footer responsive
+@include responsive-breakpoint(mobile) {
+  footer {
+    padding: 2rem 0 !important;
+  }
+
+  .social-links {
+    margin-top: 0.5rem;
+
+    a {
+      display: inline-block;
+      margin: 5px 0;
+      text-align: center;
+    }
+  }
+}

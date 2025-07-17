@@ -1,0 +1,397 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base styles
+body {
+  font-family: $font-outfit;
+  line-height: 1.6;
+  padding-top: $navbar-height;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Hero Section
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../imagenes/hero.jpg') no-repeat center center/cover;
+  position: relative;
+
+  &-title {
+    font-family: $font-playfair;
+    font-size: rem(51.2);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    @include gradient-text($gradient-hero);
+  }
+
+  &-subtitle {
+    font-size: rem(20.8);
+    color: $gray-text;
+    font-family: $font-fira;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+// Botones
+%btn-base {
+  @include btn-base;
+}
+
+.btn-hero {
+  @extend %btn-base;
+  background: $gradient-btn-hero;
+  color: $dark-bg;
+
+  &:hover {
+    background: linear-gradient(45deg, #00c0a3, #008c73);
+    color: $light-text;
+  }
+}
+
+.btn-hero-alt {
+  @extend %btn-base;
+  background: $gradient-btn-alt;
+  color: $light-text;
+
+  &:hover {
+    background: linear-gradient(45deg, #7f00ff, #9900ff);
+  }
+}
+
+.btn-custom {
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}
+
+// Games Section
+.games-section {
+  background: $dark-bg;
+  backdrop-filter: blur(10px);
+}
+
+.juegos-titulo {
+  font-family: $font-orbitron;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  @include flex-center;
+  gap: 15px;
+
+  i {
+    color: $secondary-color;
+    font-size: rem(56);
+  }
+}
+
+.titulo-color {
+  @include gradient-text;
+}
+
+// Game Cards Base
+%game-card-base {
+  background: $gradient-card;
+  background-size: 400% 400%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+    filter: brightness(1.1);
+  }
+
+  a.stretched-link {
+    color: inherit;
+    text-decoration: none;
+    z-index: 2;
+  }
+
+  .card-body {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .card-title {
+    color: $primary-color;
+    font-family: $font-playfair;
+    font-size: rem(22.4);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  h3 {
+    color: $gray-text;
+    font-size: rem(16);
+    font-family: $font-fira;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  p {
+    color: $antique-text;
+    font-family: $font-josefin;
+    font-size: rem(14.88);
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+
+// Game Cards Vertical
+.game-card {
+  @extend %game-card-base;
+
+  &:hover {
+    transform: scale(1.03) !important;
+    box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4) !important;
+    filter: brightness(1.1) !important;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// Card Image Container
+.card-img-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: $dark-bg;
+  border-radius: $border-radius $border-radius 0 0;
+  position: relative;
+}
+
+// Game Cards Horizontal
+.game-card-horizontal {
+  @extend %game-card-base;
+
+  &:hover {
+    transform: scale(1.03) !important;
+    box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4) !important;
+    filter: brightness(1.1) !important;
+  }
+
+  .horizontal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// Info Card
+.info-card {
+  max-width: 700px;
+  @extend %game-card-base;
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+.info-video-container {
+  border-radius: $border-radius $border-radius 0 0;
+  overflow: hidden;
+}
+
+.info-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.info-title {
+  color: $primary-color;
+  font-family: $font-playfair;
+  font-size: rem(28.8);
+  margin-bottom: 1rem;
+}
+
+.info-subtitle {
+  color: $gray-text;
+  font-size: rem(20.8);
+  font-family: $font-fira;
+  text-align: center;
+}
+
+.date {
+  color: $gray-text;
+  font-size: rem(16);
+  font-family: $font-fira;
+  text-align: center;
+}
+
+.info-features {
+  color: $antique-text;
+  font-family: $font-fira;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.info-icons {
+  font-family: $font-fira;
+  font-size: rem(16);
+  color: $gray-text;
+  text-align: center;
+}
+
+// Animaciones
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Responsive Design para main content
+@include responsive-breakpoint(desktop-xl) {
+  .card-img-container {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@include responsive-breakpoint(desktop) {
+  .juegos-titulo {
+    font-size: rem(46.4);
+
+    i {
+      font-size: rem(46.4);
+    }
+  }
+
+  .card-img-container {
+    aspect-ratio: 3 / 4;
+  }
+
+  .game-card-horizontal {
+    .row {
+      flex-direction: column !important;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@include responsive-breakpoint(tablet) {
+  .juegos-titulo {
+    font-size: rem(38.4);
+
+    i {
+      font-size: rem(38.4);
+    }
+  }
+
+  .card-img-container {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: #{$desktop - 0.02px}) {
+  .game-card-horizontal {
+    .row {
+      flex-direction: column !important;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@include responsive-breakpoint(mobile) {
+  body {
+    padding-top: 65px;
+  }
+
+  .juegos-titulo {
+    font-size: rem(27.2);
+
+    i {
+      font-size: rem(27.2);
+    }
+  }
+
+  .hero {
+    min-height: 80vh;
+
+    &-content {
+      h2 {
+        font-size: rem(32);
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: rem(16);
+      }
+    }
+  }
+
+  .btn-custom {
+    padding: 10px 25px;
+    font-size: rem(15.2);
+  }
+
+  .game-card {
+    margin-bottom: 1rem;
+
+    .card-title {
+      font-size: rem(22.4);
+    }
+
+    h3 {
+      font-size: rem(16);
+    }
+
+    p {
+      font-size: rem(16);
+    }
+  }
+
+  .card-img-container {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@include responsive-breakpoint(mobile-sm) {
+  .juegos-titulo {
+    font-size: rem(24);
+
+    i {
+      font-size: rem(24);
+    }
+  }
+
+  .card-img-container {
+    aspect-ratio: 3 / 4;
+  }
+}

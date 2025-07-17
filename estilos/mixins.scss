@@ -1,0 +1,77 @@
+@use 'variables' as *;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradient-text($gradient: $gradient-text) {
+  background: $gradient;
+  background-size: 200%;
+  background-position: 0% center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+@mixin card-hover-effect {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+  filter: brightness(1.1);
+}
+
+@mixin btn-base {
+  border: none;
+  border-radius: $border-radius-btn;
+  padding: 14px 32px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@mixin text-shadow-glow($color: $primary-color, $secondary: $secondary-color) {
+  text-shadow: 0 0 5px $color, 0 0 10px $secondary;
+}
+
+@mixin responsive-breakpoint($breakpoint) {
+  @if $breakpoint == desktop-xl {
+    @media (min-width: $desktop-xl) {
+      @content;
+    }
+  }
+  @else if $breakpoint == desktop {
+    @media (min-width: $desktop) and (max-width: #{$desktop-xl - 0.02px}) {
+      @content;
+    }
+  }
+  @else if $breakpoint == tablet {
+    @media (min-width: $tablet) and (max-width: #{$desktop - 0.02px}) {
+      @content;
+    }
+  }
+  @else if $breakpoint == mobile {
+    @media (max-width: #{$tablet - 0.02px}) {
+      @content;
+    }
+  }
+  @else if $breakpoint == mobile-sm {
+    @media (max-width: #{$mobile - 0.02px}) {
+      @content;
+    }
+  }
+}
+
+// Funciones
+@function rem($pixels) {
+  @return #{$pixels / 16}rem;
+}
+
+@function lighten-color($color, $amount: 10%) {
+  @return lighten($color, $amount);
+}
